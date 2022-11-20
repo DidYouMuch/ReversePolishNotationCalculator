@@ -27,7 +27,7 @@ public class Calculator {
                 int right = stack.pop();
                 int left = stack.pop();
                 AbstractOperation math = this.getOperationManager().getByChar(current.charAt(0));
-                final int result = math.get(left, right);
+                int result = math.get(left, right);
                 stack.push(result);
             } else {
                 stack.push(Integer.valueOf(current));
